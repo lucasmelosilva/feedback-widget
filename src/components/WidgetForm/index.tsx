@@ -7,7 +7,7 @@ import { FeedbackContentStep } from "./Steps/FeedbackContentStep";
 
 export const feedbackTypes = {
   BUG: {
-    title: "Bug",
+    title: "Probema",
     image: {
       source: bugImageUrl,
       alt: "Image de um inseto",
@@ -33,6 +33,7 @@ export type FeedBackType = keyof typeof feedbackTypes;
 
 export function WidgetForm() {
   const [feedbackType, setFeedbackType] = useState<FeedBackType | null>(null);
+  const [isSendFeedback, isFeedbackSent] = useState(false);
 
   function handleRestartFeedback() {
     setFeedbackType(null);
