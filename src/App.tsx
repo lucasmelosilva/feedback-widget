@@ -1,5 +1,11 @@
+import { Widget } from "./components/Widget";
+
 function App() {
-  return <h1>Hello, World</h1>;
+  return (
+    <div className="flex gap-2">
+      <Widget />
+    </div>
+  );
 }
 
 export default App;
